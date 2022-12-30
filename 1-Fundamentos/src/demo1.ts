@@ -10,7 +10,7 @@
 
 async () => {
   const myCart = [];
-  const products = [];
+  const products: string | any[] = [];
   const limit = 2;
 
   async function getProducts() {
@@ -30,7 +30,7 @@ async () => {
     return total;
   }
 
-  function addProduct(index) {
+  function addProduct(index: number) {
     if (getTotal() <= limit) {
       myCart.push(products[index]);
     }
