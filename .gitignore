@@ -1,6 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/windows,macos,linux,node
 # Edit at https://www.toptal.com/developers/gitignore?templates=windows,macos,linux,node
 
+
 ### Linux ###
 *~
 
@@ -91,7 +92,8 @@ bower_components
 build/Release
 
 # Dependency directories
-node_modules/
+1-Fundamentos/node_modules/
+2-Avanzado/node_modules/
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
