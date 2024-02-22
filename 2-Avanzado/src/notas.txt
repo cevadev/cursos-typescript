@@ -1,0 +1,2 @@
+Para ejecutar los archivos typescript usamos ts-node.
+npx ts-node src/[nombre del archivo].ts
