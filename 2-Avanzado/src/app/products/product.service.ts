@@ -1,7 +1,11 @@
 import { faker } from '@faker-js/faker';
 
 import { Product } from './product.model';
-import { CreateProductDTO } from './product.dto';
+import {
+  CreateProductDTO,
+  UpdateProductDTO,
+  FindProductDTO,
+} from './product.dto';
 
 export const products: Product[] = [];
 
@@ -26,4 +30,32 @@ export const addProduct = (product: CreateProductDTO): Product => {
   return newProduct;
 };
 
-export const updateProduct = (id: string, product: Product) => {};
+/**
+ *
+ * @param id parametro que nos permite buscar un producto dentro del array products, con la forma Product['id'] obtenemos el tipado
+ *        del atributo id de Product, esto nos da la flexibilidad de que si mas adelante el tipo de dato del atributo id cambia
+ *        no tenemos que hacer cambios en nuestro codigo.
+ * @param changes
+ * @returns
+ */
+export const updateProduct = (
+  /* id: string */
+  // id: Product['id'],
+  id: string,
+  changes: UpdateProductDTO
+): Product => {
+  // obtenemos el id del producto en el array
+  const index = products.findIndex((product) => product.id == id);
+  // seleccionamos el producto con los datos antiguos
+  const oldProduct = products[index];
+  products[index] = {
+    // hacemos un merge entre los datos antiguos y los modificados
+    ...oldProduct,
+    ...changes,
+  };
+  return products[index];
+};
+
+export const findProduct = (product: FindProductDTO): Product[] => {
+  return products;
+};
