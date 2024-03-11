@@ -1,0 +1,27 @@
+INICIAR UN PROYECTO EN NODE
+npm init -y
+
+INSTALAR TYPESCRIPT EN MODO LOCAL
+npm install --save-dev typescript
+
+INICIAMOS UN PROYECTO TYPESCRIPT PRECONFIGURADO
+npx tsc --init
+
+VERIFICAR QUE TYPESCRIPT SE INSTALO CORRECTAMENTE
+npx tsc
+
+COMANDO PARA DETECTAR CAMBIOS EN ARCHIVOS TS Y TRANSPILARLO AUTOMATICAMENTE A javascript
+npx tsc --watch
+
+INSTALACION TS-NODE PARA CORRER DIRECTAMENTE CODIGO EN TYPESCRIPT
+npm install --save-dev ts-node
+
+1. Debemos crear una carpeta Dist donde se colocara el codigo ts transpilado a js y asi llevamos los archivos js donde deseemos
+2. el archivo tsconfig.json buscamos la llave outDir y colocamos "outDir": "./dist"
+3. Creamos una carpet src donde escribiremos el codigo de la app
+
+EJECUCTANDO CODIGO TYPESCRIPT CON TS-NODE
+npx ts-node src/01-class.ts
+
+COMANDO PARA TRANSPILAR CODIGO TYPESCRIPT A javascript
+npx tsc

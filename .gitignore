@@ -94,6 +94,7 @@ build/Release
 # Dependency directories
 1-Fundamentos/node_modules/
 2-Avanzado/node_modules/
+3-POO/node_modules/
 jspm_packages/
 
 # Snowpack dependency directory (https://snowpack.dev/)
