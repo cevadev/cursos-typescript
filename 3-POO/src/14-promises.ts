@@ -24,7 +24,7 @@ import axios from 'axios';
   // const products = await getProducts();
   // console.info(products.data);
 
-  // version asincrona de getProducts() 
+  // version asincrona de getProducts()
   async function getProductsAsync() {
     const rpta = await axios.get('https://api.escuelajs.co/api/v1/products');
     return rpta.data;
@@ -33,3 +33,4 @@ import axios from 'axios';
   const productsAsync = await getProductsAsync();
   console.info(productsAsync);
 })();
+  
